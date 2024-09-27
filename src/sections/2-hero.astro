@@ -7,7 +7,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <section
-	class="lineUp section_hero pt-32 sm:pt-20 pb-4 px-[var(--body-margin-x)] text-white top-0 bottom-0 z-[2] flex items-left"
+	class="lineUp section_hero pt-32 sm:pt-20 pb-4 px-[var(--body-margin-x)] text-white top-0 bottom-0 z-[2] items-left"
 >
 	<!-- <img class="h-24 sm:h-32" src="/logo.png" /> -->
 	<h1
@@ -20,9 +20,28 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 			>{t("hero__title")}</span
 		>
 	</h1>
-
+	<div class="w-full">
+		<div
+			class="flex items-left text-[16px] sm:text-[24px] gap-y-6 mt-8 w-fit ml-0"
+			style="padding-bottom: 30px;"
+		>
+			<a
+				href="./indexnumber"
+				class="text-white no-underline hover:underline inline-block"
+			>
+				<button class="btn !w-full">
+					<span>
+						{t("hero_index_button")}
+					</span>
+					<i
+						class="fa-solid fa-arrow-right translate-x-[10px] transition-transform pr-2"
+					></i>
+				</button>
+			</a>
+		</div>
+	</div>
 	<!-- <div
-		class="text-[16px] sm:text-[24px] flex flex-col gap-y-6 mt-8 w-fit"
+		class="text-[16px] sm:text-[24px] gap-y-6 mt-8 w-fit"
 		style="padding-bottom: 30px;"
 	>
 		<a href="./results" class="no-underline">
@@ -36,31 +55,40 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 			</button>
 		</a>
 		<a
-			href="./find-your-index-number"
-			class="text-white no-underline hover:underline w-full inline-block"
+			href="./indexnumber"
+			class="text-white no-underline hover:underline inline-block"
 		>
-			<button class="btn !w-full">{t("hero_index_button")}</button>
-		</a>
-	</div> -->
-	<div class="text-[16px] sm:text-[24px] flex flex-col gap-y-6 mt-8 w-fit"
-		style="padding-bottom: 30px;">
-		<a href="https://forms.gle/shTKWksUk7KSkjrV6" class="no-underline">
-			<button class="btn">
+			<button class="btn !w-full">
 				<span>
-					{t("hero_form_sub_button")}
+					{t("hero_index_button")}
 				</span>
 				<i
 					class="fa-solid fa-arrow-right translate-x-[10px] transition-transform pr-2"
 				></i>
 			</button>
 		</a>
-	</div>
-	<!-- <hr style="width: 100vh; " />
+	</div> -->
+</section>
+<!-- <div
+	class="text-[16px] sm:text-[24px] flex flex-col gap-y-6 mt-8 w-fit"
+	style="padding-bottom: 30px;"
+>
+	<a href="https://forms.gle/shTKWksUk7KSkjrV6" class="no-underline">
+		<button class="btn">
+			<span>
+				{t("hero_form_sub_button")}
+			</span>
+			<i
+				class="fa-solid fa-arrow-right translate-x-[10px] transition-transform pr-2"
+			></i>
+		</button>
+	</a>
+</div> -->
+<!-- <hr style="width: 100vh; " />
 	<div class="picture_heading">
 		<a>Past Exam pictures</a>
 	</div>
 	<center><Slideshow1 /></center> -->
-</section>
 
 <script>
 	(() => {

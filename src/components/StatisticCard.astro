@@ -4,14 +4,19 @@ import InViewNumberAnimator from "./react/InViewNumberAnimator";
 interface Props {
 	value: number;
 	text: string;
+	suffix?: string;
 }
 
-const { value, text } = Astro.props;
+const { value, text, suffix } = Astro.props;
 ---
 
 <div class="text-center px-12 pointer-events-none">
 	<h2 class="text-7xl text-center my-0">
-		<InViewNumberAnimator client:only="react" targetValue={value} />
+		<InViewNumberAnimator
+			suffix={suffix}
+			client:only="react"
+			targetValue={value}
+		/>
 	</h2>
 
 	<p class="text-center text-xl mt-0">{text}</p>

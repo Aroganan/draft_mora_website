@@ -9,9 +9,13 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 	<div class="grid grid-flow-col" id="counter">
 		<hr />
 		<StatisticCard value={15} text={t("statistics__years")} /><hr />
-		<StatisticCard value={22} text={t("statistics__districts")} /><hr />
-		<StatisticCard value={71} text={t("statistics__centers")} /><hr />
-		<StatisticCard value={6821} text={t("statistics__candidates")} /><hr />
+		<StatisticCard value={25} text={t("statistics__districts")} /><hr />
+		<StatisticCard value={75} text={t("statistics__centers")} /><hr />
+		<StatisticCard
+			value={6800}
+			suffix="+"
+			text={t("statistics__candidates")}
+		/><hr />
 	</div>
 </section>
 <style>

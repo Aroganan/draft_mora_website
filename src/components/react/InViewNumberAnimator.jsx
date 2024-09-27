@@ -1,6 +1,10 @@
 import { useEffect, useState, useRef } from "react";
 
-export default function InViewNumberAnimator({ targetValue, duration = 2000 }) {
+export default function InViewNumberAnimator({
+	targetValue,
+	duration = 2000,
+	suffix,
+}) {
 	const [currentValue, setCurrentValue] = useState(0);
 	const [isVisible, setIsVisible] = useState(false);
 	const startTimeRef = useRef(null);
@@ -59,10 +63,9 @@ export default function InViewNumberAnimator({ targetValue, duration = 2000 }) {
 				fontFamily: "Noto Sans, monospace",
 			}}
 		>
-			{(isVisible ? currentValue.toString() : "0").padStart(
-				targetValue.toString().length,
-				"0",
-			)}
+			{(isVisible ? currentValue.toString() : "0")
+				.padStart(targetValue.toString().length, "0")
+				.concat(suffix ? suffix : "")}
 		</span>
 	);
 }

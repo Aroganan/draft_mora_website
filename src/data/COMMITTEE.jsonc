@@ -8,9 +8,9 @@
 			"post_en": "President",
 			"post_ta": "President",
 			"designation_en": "Civil Engineering Department",
-			"contact_number": "0759047407",
-		},
-	],
+			"contact_number": "0759047407"
+		}
+	]
 }
 
 // testing categorizing data to make it easy to edit and access for future use cases

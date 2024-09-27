@@ -11,13 +11,20 @@ export default defineConfig({
 	output: "hybrid",
 	redirects: {
 		"/": `/${defaultLang}/`,
-		"/modelpaper": `https://drive.google.com/drive/folders/1pAzO3OQ7nwBLuJ_gU-4vY12x6eENrwPz`,
-		"/feedback": 'https://forms.gle/Ca6k2rH6FNCn6NTB8',
+		"/modelpaper":
+			"https://drive.google.com/drive/folders/1pAzO3OQ7nwBLuJ_gU-4vY12x6eENrwPz",
+		"/feedback": "https://forms.gle/Ca6k2rH6FNCn6NTB8",
 		"/results": `/${defaultLang}/results`,
+		"/indexnumber": `/${defaultLang}/indexnumber`,
+		"/test": "https://google.com",
 		"/practicepapers": `/${defaultLang}/practicepapers`,
+		"/instructions": `/${defaultLang}/instructions_ta`,
+		"/instructions_ta": `/${defaultLang}/instructions_ta`,
+		"/instructions_en": `/${defaultLang}/instructions_en`,
+
 		"/manage": "https://moraetamils.com/manage",
-		"/tshirt":"https://forms.gle/SJTHD5c5kqkegARk9",
-		"/moraexamadmissionform":"https://forms.gle/shTKWksUk7KSkjrV6"
+		"/tshirt": "https://forms.gle/SJTHD5c5kqkegARk9",
+		"/moraexamadmissionform": "https://forms.gle/shTKWksUk7KSkjrV6",
 	},
 	adapter: netlify({
 		edgeMiddleware: true,

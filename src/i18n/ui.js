@@ -182,7 +182,7 @@ export const ui = Object.freeze({
 		nav__practice_papers: "Practice Papers",
 
 		hero__title: "Sri Lanka's biggest pilot exams for G.C.E. Advanced Level",
-		hero_form_sub_button: "Exam Form", 
+		hero_form_sub_button: "Exam Form",
 
 		find_your_examination_centres__tile: "Find your examination centres",
 		find_your_examination_centres__description: `We have ${totalExamCentres} examination centre networks covering almost the whole island. Choose your district from the map, to view the available exam centres.`,
@@ -243,7 +243,7 @@ export const ui = Object.freeze({
 		pathway__card3_para:
 			"Tech stream added in 2016 due to student requests and Provincial Director of Education. Our management now delegated to  tech faculty, University of Jaffna for student welfare.",
 		pathway__card4_para:
-			"In the 15th year of the Mora Exam, we are proud to serve the students. Last year, we expanded our service to 22 districts, conducted the examinations in more than 71 examination centres, and accommodated more than 6,500 candidates.",
+			"In the 15th year of the Mora Exam, we are proud to serve the students. Last year, we expanded our service to 25 districts, conducted the examinations in more than 75 examination centres, and accommodated more than 6,500 candidates.",
 
 		feedback_heading: "Thoughts from the Champions",
 		achivers_ranking_1: "Ex-President",
@@ -410,7 +410,7 @@ export const ui = Object.freeze({
 		pathway__card3_para:
 			"மாணவர்களின் கோரிக்கைகள் மற்றும் மாகாணக் கல்விப் பணிப்பாளர் காரணமாக 2016 இல் தொழில்நுட்ப பிரிவும் சேர்க்கப்பட்டது. எங்கள் நிர்வாகம் இப்போது மாணவர் நலனுக்காக யாழ்ப்பாணப் பல்கலைக்கழகத்தின் தொழில்நுட்ப பீடத்திடம் ஒப்படைக்கப்பட்டுள்ளது.",
 		pathway__card4_para:
-			"	15 ஆவது மொறா பரீட்சையை வெற்றிகரமாக நடாத்துவதை எண்ணி பெருமையடைகின்றோம். கடந்த வருடம் 22 மாவட்டங்களில் 71 பரீட்சை நிலையங்களில் 6500 இற்கு மேற்பட்ட மாணவர்களை உள்ளடக்கி எமது பரீட்சையை நடாத்தி இருந்தோம்.",
+			"	15 ஆவது மொறா பரீட்சையை வெற்றிகரமாக நடாத்துவதை எண்ணி பெருமையடைகின்றோம். கடந்த வருடம் 25 மாவட்டங்களில் 75 பரீட்சை நிலையங்களில் 6500 இற்கு மேற்பட்ட மாணவர்களை உள்ளடக்கி எமது பரீட்சையை நடாத்தி இருந்தோம்.",
 		feedback_iroshan:
 			"இத்தேர்வு பல்வேறு படிநிலைகளை தாண்டி தேசிய அங்கீகாரம் பெற்று காணப்படுகின்றது. சுருக்கமாக சொல்லப்போனால் இது பரீட்சையின் அடுத்த நிலை ஆகும்.",
 		feedback_darukeesan:

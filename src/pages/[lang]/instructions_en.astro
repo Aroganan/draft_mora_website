@@ -1,0 +1,218 @@
+---
+export const prerender = false;
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+
+
+---
+
+<Layout pageTitle={t("index__title")}>
+
+	<style>
+		body {
+				font-family: Arial, sans-serif;
+				background-color: #f3f3f3;
+				color: #333;
+				margin: 0;
+				padding: 0;
+		}
+
+		.container {
+				padding: 20px;
+				max-width: 800px;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				background-color: #fff;
+		}
+
+		header {
+				background-color: #4a0072;
+
+				color: #4a0072;
+				padding: 10px 0;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				margin-bottom: 20px;
+		}
+
+		header img {
+				width: 50px;
+				height: 50px;
+				margin-right: 15px;
+		}
+
+		header h1 {
+				color: #ffffff;
+				margin: 0;
+				font-size: 40px;
+		}
+
+		footer {
+				background-color: #4a0072;
+				color: white;
+				text-align: center;
+				padding: 10px 0;
+				margin-top: 20px;
+				width: 100%;
+		}
+		.footer2 {
+				
+				color: rgb(0, 0, 0);
+				text-align: left;
+				margin-left: 20px;
+				padding: 10px 0;
+				margin-top: 10px;
+				width: 100%;
+		}
+
+		.tabs {
+				display: flex;
+				justify-content: left;
+				margin-bottom: 20px;
+		}
+
+		.tablinks {
+				background-color: #e9e3f2;
+				border: none;
+				outline: none;
+				cursor: pointer;
+				padding: 14px 20px;
+				margin-right: 5px;
+				font-size: 16px;
+				color: #4a0072;
+				border-radius: 20px;
+				transition: background-color 0.3s ease;
+		}
+
+		.tablinks:hover {
+				background-color: #d6cdea;
+		}
+
+		.tablinks.active {
+				background-color: #4a0072;
+				color: white;
+		}
+
+		.tabcontent {
+				display: none;
+				background-color: #e9e3f2;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+
+		h1 {
+				text-align: center;
+				color: #5c0095;
+				margin-bottom: 20px;
+				font-size: 30px;
+		}
+
+		h2 {
+				color: #5c0095;
+				margin-top: 20px;
+				font-size: 20px;
+		}
+
+		p {
+				line-height: 1.6;
+
+		}
+
+		@media (max-width: 600px) {
+				.tablinks {
+						
+						font-size: 14px;
+						padding: 10px;
+				}
+
+				h1 {
+						font-size: 24px;
+				}
+
+				h2 {
+						font-size: 20px;
+				}
+		}
+</style>
+
+
+<div class="container">
+		<!-- Header Section -->
+		<header>
+				<img src="https://moraexamsdash.netlify.app/assets/logo-def7fb7e.png" alt="Logo" style="width:10%; height:auto;">
+				<h1>Mora Exams 2024</h1>
+		</header>
+
+		<!-- Main Content -->
+		<div class="tabs">
+			<button class="tablinks" onclick="window.location.href='/instructions_ta';">தமிழ்</button>
+			<button class="tablinks active" onclick="window.location.href='/instructions_en';">English</button>
+	</div>
+
+		
+		<div id="English" class="tabcontent active" style="display: block;">
+				<h1>Exam Instructions for Students</h1>
+				<h2>Arrival Time:</h2>
+				<p>Students must arrive at the exam center at least 15 minutes before the exam begins.<br> Entry to the exam hall will be allowed 10 minutes before the start of the exam.</p>
+
+				<h2>Exam Center & Hall Assignment:</h2>
+				<p style="color: rgb(255, 0, 0);">Students must attend the exam center they registered for on their admission form. Entry to any other exam center will not be permitted.<p>
+				<p>You can find your assigned exam center in the email sent to you for index number confirmation. Please refer to this email to ensure you arrive at the correct center.</p>
+				<p>Students must use the same exam hall throughout all their exams unless otherwise instructed by the invigilators.</p>
+
+				<h2>Identification:</h2>
+				<p>All students must bring their National Identity Card (NIC) to the exam hall for verification.</p>
+
+				<h2>Dress Code:</h2>
+				<p>Casual dress is allowed in most exam centers. However, in some centers, school uniforms are mandatory. Check with your center for specific requirements.</p>
+
+				<h2>Late Arrivals:</h2>
+				<p>Students arriving 30 minutes after the start of the exam will not be allowed to enter and participate.</p>
+
+				<h2>Attendance Policy:</h2>
+				<p style="color: rgb(255, 0, 0);">If a student registers for all exams but fails to attend one exam, they will not be permitted to attend the remaining exams.</p>
+
+				<h2>Answer Sheets and Materials:</h2>
+				<p>Bringing any sheets from outside is strictly prohibited. Only the official exam answer sheets provided in the hall can be used.<br> Examination answer sheets must not be taken out of the exam hall under any circumstances.</p>
+
+				<h2>Permitted and Prohibited Items:</h2>
+				<p>Logarithmic tables are allowed if needed by students.<br> Smartphones, digital devices, and calculators are strictly not allowed in the exam hall.</p>
+
+				<h2>Responsible Use of the Exam Center:</h2>
+				<p>Students must use the exam center with respect and responsibility, ensuring no damage is caused to the exam hall or its property.</p>
+
+				<h2>Unethical Conduct:</h2>
+				<p style="color: rgb(255, 0, 0);">Any form of cheating or misconduct (e.g., copying from others) will result in immediate termination from the exam.</p>
+
+				<h2>Decision Authority:</h2>
+				<p style="color: rgb(255, 0, 0);">The Mora Exams 2024 | Examination Committee reserves the right to make all final decisions in case of any disputes or issues during the exam.</p>
+		</div>
+
+		<div class = "footer2">
+				<p>If you have any issues or need clarification, contact us:</p>
+				<p><strong>Email:</strong> <a href="mailto:examsmora@.org">examsmora@gmail.com</a></p>
+				<p><strong>Kalaippiriyan:</strong> 077 843 5612</p>
+				<p><strong>Koshiga:</strong> 075 276 5054</p>
+			</div>
+		<!-- Footer Section -->
+		<footer>
+				<p><div>&copy; Copyright reserved to <strong>Mora Exams</strong>. All Rights Reserved.</div></p>
+		</footer>
+</div>
+    
+</Layout>
+
+
+
