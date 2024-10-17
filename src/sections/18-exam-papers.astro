@@ -1,0 +1,40 @@
+---
+import Flip from "../components/flipping_card2.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+const lang = getLangFromUrl(Astro.url);
+import exam_papers from "../exam_papers.json";
+const exam_papers_data = exam_papers;
+
+// JS required for this section goes here (don't bother for now)
+---
+
+<section class="my-10">
+	<h2 class="text-center">{t("exam_papers_title")}</h2>
+	<p class="text-center text-xl my-8">
+		{t("exam_papers_p")}
+	</p>
+	<div
+		id="flip_cards"
+		class="grid grid-cols-1 auto-rows-fr sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-10xl gap-4 mt-10 mx-auto text-center justify-items-center"
+	>
+		{
+			exam_papers_data.map((entry) => {
+				return (
+					<Flip
+						subject01={
+							lang === "en" ? entry.subject_en_01 : entry.subject_ta_01
+						}
+						download_link_e_01={entry.download_link_e_01}
+						download_link_t_01={entry.download_link_t_01}
+
+						scheme_title={lang === "en" ? entry.title_en : entry.title_ta}
+						scheme_link_en={entry.scheme_link_en}
+						scheme_link_ta={entry.scheme_link_ta}
+					/>
+				);
+			})
+		}
+	</div>
+</section>

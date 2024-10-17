@@ -1,0 +1,41 @@
+---
+export const prerender = false;
+import Layout from "../../layouts/Layout.astro";
+
+import NavigationBar from "../../sections/1-navigation-bar.astro";
+
+import ExamPapers from "../../sections/18-exam-papers.astro";
+
+import Footer from "../../sections/16.1-footer.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout pageTitle={t("index__title")}>
+	<div class="bg-purple-800">
+		<NavigationBar />
+	</div>
+	<ExamPapers />
+	<Footer />
+</Layout>
+
+<style is:global>
+	body {
+		@apply text-black;
+	}
+	body:has(#nav-bar-toggle:checked),
+	body.disable-scrolling {
+		overflow: hidden;
+	}
+	body > * {
+		@apply px-[var(--body-margin-x)];
+	}
+	section {
+		@apply scroll-mt-20;
+	}
+	.first-fold {
+		background: url("/assets/backgrounds/bg7.png") center / cover no-repeat
+			fixed;
+	}
+</style>

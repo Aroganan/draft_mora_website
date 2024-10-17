@@ -1,0 +1,204 @@
+---
+export const prerender = false;
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../sections/16-footer.astro";
+
+import NavigationBar from "../../sections/1-navigation-bar.astro";
+import { isSupportedLanguage, useTranslations } from "../../i18n/utils";
+
+const { lang } = Astro.params;
+
+if (!isSupportedLanguage(lang)) {
+	return;
+}
+const t = useTranslations(lang);
+
+const id = Astro.url.searchParams.get("id") || undefined;
+
+let selectedStudent = undefined;
+
+if (id) {
+	const response = await fetch(
+		`https://api.moraexams.org/student/check/${id}`,
+		// `http://localhost:8080/student/nic/${nicNumber}`,
+	);
+	const data = await response.json();
+	if (data.error) {
+		selectedStudent = null;
+	} else {
+		selectedStudent = data;
+	}
+}
+---
+
+<style>
+	.table-container {
+		padding: 0 0;
+		overflow-x: auto;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-top: 4%;
+		margin-bottom: 2%;
+	}
+
+	th,
+	td {
+		padding: 12px;
+		text-align: left;
+		border-bottom: 1px solid #ddd;
+	}
+
+	th {
+		background-color: #4a0072;
+		color: #fff;
+		font-weight: bold;
+	}
+
+	td {
+		color: #333;
+	}
+</style>
+
+<Layout pageTitle={"Check Student"}>
+	<section
+		class="min-h-screen bg-delft-blue-50/50 text-primary-900 flex justify-center"
+	>
+		<div
+			class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1"
+		>
+			<div class="lg:w1/2 xl:w-5/12 p-2 sm:p-12 flex-1">
+				<div class="mt-2 m-auto flex flex-col items-center justify-center">
+					<h1 class="text-3xl xl:text-4xl text-center">
+						Check and Verify Student
+					</h1>
+					<p class="text-xl xl:text-2xl text-center text-black max-w-prose">
+						Enter Index Number or NIC Number.
+					</p>
+					<form
+						method="get"
+						action={`/${lang}/checkstudent`}
+						style="display: contents;"
+					>
+						<input
+							class="w-full max-w-2xl px-8 py-4 rounded-lg bg-delft-blue-50/25 border border-primary-900/20 placeholder-rust-orange-50 text-md focus:outline-none focus:border-gray focus:bg-white mt-4"
+							type="text"
+							name="id"
+							value={id}
+							placeholder={"Index No or NIC"}
+							inputmode="numeric"
+						/>
+						<button
+							class="my-6 w-1/2 py-2 rounded-full text-primary-800 text-xl bg-white hover:bg-delft-blue-50/50 border border-sm border-black/25 focus:outline-none focus:shadow focus:border-none"
+						>
+							<i class="fa-solid fa-magnifying-glass"></i><span class="ml-3"
+								>{t("find_button")}</span
+							>
+						</button>
+					</form>
+					{
+						typeof selectedStudent == "undefined" ? null : selectedStudent ==
+						  null ? (
+							<div
+								style="color: red; text-align: center;"
+								class="text-center mt-5"
+							>
+								Not found
+							</div>
+						) : (
+							<div class="table-container">
+								<table>
+									<td>Index Number</td>
+									<td>:</td>
+									<td>
+										<strong>{selectedStudent.index_no}</strong>
+									</td>
+									<tr>
+										<td>NIC Number</td>
+										<td>:</td>
+										<td>
+											<strong>{selectedStudent.nic}</strong>
+										</td>
+									</tr>
+									<tr>
+										<td>Full Name</td>
+										<td>:</td>
+										<td>
+											<strong>{selectedStudent.name}</strong>
+										</td>
+									</tr>
+									<tr>
+										<td>Stream</td>
+										<td>:</td>
+										<td>
+											<strong>{selectedStudent.stream}</strong>
+										</td>
+									</tr>
+									<tr>
+										<td>Medium</td>
+										<td>:</td>
+										<td>
+											<strong>{selectedStudent.medium}</strong>
+										</td>
+									</tr>
+									<tr>
+										<td>Exam Centre</td>
+										<td>:</td>
+										<td>
+											<strong>{selectedStudent.exam_centre}</strong>
+										</td>
+									</tr>
+								</table>
+							</div>
+							// <table>
+							// 	<tr>
+							// 		<td>Index No:</td>
+							// 		<td>{selectedStudent.index_no}</td>
+							// 	</tr>
+							// 	<tr>
+							// 		<td>NIC:</td>
+							// 		<td>{selectedStudent.nic}</td>
+							// 	</tr>
+							// 	<tr>
+							// 		<td>Name:</td>
+							// 		<td>{selectedStudent.name}</td>
+							// 	</tr>
+							// 	<tr>
+							// 		<td>Stream:</td>
+							// 		<td>{selectedStudent.stream}</td>
+							// 	</tr>
+							// 	<tr>
+							// 		<td>Medium:</td>
+							// 		<td>{selectedStudent.medium}</td>
+							// 	</tr>
+							// 	<tr>
+							// 		<td>Centre:</td>
+							// 		<td>{selectedStudent.exam_centre}</td>
+							// 	</tr>
+							// </table>
+						)
+					}
+				</div>
+			</div>
+			<div class="lg:flex hidden max-w-[700px]">
+				<div
+					class="mr-14 min-w-[240px] w-full bg-contain bg-center bg-no-repeat max-h-screen"
+					style="background-image: url('/assets/Illustrations/bg23.svg');"
+				>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+<style>
+	@media screen and (max-width: 400px) {
+		input {
+			font-size: 16px;
+		}
+	}
+	table {
+		width: 100%;
+	}
+</style>

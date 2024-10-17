@@ -41,6 +41,7 @@ for (const d of EXAM_CENTRES.districts) {
  * @prop {string} nav__resources
  * @prop {string} nav__about
  * @prop {string} nav__practice_papers
+ * @prop {string} nav__exam_papers
  * @prop {string} nav__home
  * @prop {string} hero__title
  * @prop {string} hero_form_sub_button
@@ -163,6 +164,8 @@ for (const d of EXAM_CENTRES.districts) {
  * @prop {string} find_your_index_no__title
  * @prop {string} practice_papers_title
  * @prop {string} practice_papers_p
+ * @prop {string} exam_papers_title
+ * @prop {string} exam_papers_p
 
  */
 
@@ -180,6 +183,7 @@ export const ui = Object.freeze({
 		nav__resources: "Resources",
 		nav__about: "About Us",
 		nav__practice_papers: "Practice Papers",
+		nav__exam_papers: "Exam Papers",
 
 		hero__title: "Sri Lanka's biggest pilot exams for G.C.E. Advanced Level",
 		hero_form_sub_button: "Exam Form",
@@ -221,7 +225,10 @@ export const ui = Object.freeze({
 		footer_title_4_s3: "E-learning Videos",
 		footer_title_4_s4: "E-learning Site",
 		footer_title_4_s5: "Doubts Forms",
+		exam_papers_title: "Mora Exams 2024 Schemes",
+		exam_papers_p:"Access the Tamil and English medium schemes for Mora Exams 2024 through the links provided below for easy download and reference.",
 		practice_papers_title: "Practice Papers",
+		
 		practice_papers_p:
 			"We have a collection of practice papers for each subject, prepared under the guidance of our engineering students of University of Moratuwa. Click on any of the subjects listed below and download the respective papers.",
 		elearning_videos_title: "E-Learning videos",
@@ -353,6 +360,7 @@ export const ui = Object.freeze({
 		nav__resources: "வளங்கள்",
 		nav__about: "எம்மைப் பற்றி",
 		nav__practice_papers: "பயிற்சி வினாத்தாள்கள்",
+		nav__exam_papers: "பரீட்சை வினாத்தாள்கள்",
 		hero__title: "இலங்கையின் மாபெரும் உயர்தர முன்னோடிப்பரீட்சை",
 		hero_form_sub_button: "Exam Form",
 		find_your_examination_centres__tile:
@@ -389,6 +397,9 @@ export const ui = Object.freeze({
 		footer_title_4_s3: "மின் கற்றல் வீடியோக்கள்",
 		footer_title_4_s4: "மின் கற்றல் தளம்",
 		footer_title_4_s5: "சந்தேக படிவங்கள்",
+		exam_papers_title: "Mora Exams 2024 புள்ளித்திட்டங்கள்",
+		exam_papers_p:"தமிழ் மற்றும் ஆங்கில புள்ளித்திட்டங்களை கீழே கொடுக்கப்பட்டுள்ள இணைப்புகளில் இருந்து எளிதாக பதிவிறக்கம் செய்து காணலாம்.",
+		
 		practice_papers_title: "பயிற்சி வினாத்தாள்கள்",
 		practice_papers_p:
 			"மொறட்டுவைப்  பல்கலைக்கழக பொறியியல் மாணவர்களின் வழிகாட்டலின் கீழ் தயாரிக்கப்பட்ட பயிற்சி வினாத்தாள் தொகுப்பு. கீழுள்ள இணைப்பின் ஊடாக தரையிறக்கம் செய்துகொள்ள முடியும்.",

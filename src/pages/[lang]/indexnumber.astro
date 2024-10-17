@@ -31,7 +31,7 @@ function formatKey(key: string) {
 
 if (nicNumber) {
 	const response = await fetch(
-		`https://api.maathavan.live/student/nic/${nicNumber}`,
+		`https://api.moraexams.org/student/nic/${nicNumber}`,
 		// `http://localhost:8080/student/nic/${nicNumber}`,
 	);
 	const data = await response.json();
@@ -72,6 +72,7 @@ if (nicNumber) {
 							name="nic"
 							value={nicNumber}
 							placeholder={t("nic_no")}
+							inputmode="numeric"
 						/>
 						<button
 							class="my-6 w-1/2 py-2 rounded-full text-primary-800 text-xl bg-white hover:bg-delft-blue-50/50 border border-sm border-black/25 focus:outline-none focus:shadow focus:border-none"
