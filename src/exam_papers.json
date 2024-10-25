@@ -19,7 +19,6 @@
 		"scheme_link_en": "https://drive.google.com/file/d/1H6vNVH6Fk3WjvePr_3qQmjs_FN5e7Zf2/view?usp=sharing",
 		"scheme_link_ta": "https://drive.google.com/file/d/1jMyis1o0ZqzMYmrcujKADRuNKbW3MbQE/view?usp=sharing"
 	},
-
 	{
 		"subject_en_01": "Biology",
 		"subject_ta_01": "உயிரியல்",
@@ -43,7 +42,7 @@
 	{
 		"subject_en_01": "Chemistry",
 		"subject_ta_01": "இரசாயனவியயல்",
-		"download_link_t_01": "",
+		"download_link_t_01": "/test",
 		"download_link_e_01": "",
 		"title_en": "Scheme",
 		"title_ta": "விடைத்தாள்",
