@@ -1,11 +1,8 @@
 ---
 export const prerender = false;
 import Layout from "../../layouts/Layout.astro";
-
 import NavigationBar from "../../sections/1-navigation-bar.astro";
-
 import ExamPapers from "../../sections/18-exam-papers.astro";
-
 import Footer from "../../sections/16.1-footer.astro";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
@@ -16,7 +13,216 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 	<div class="bg-purple-800">
 		<NavigationBar />
 	</div>
-	<ExamPapers />
+
+	<section class="my-10">
+		<div class="grid-container">
+			<!-- Card 1 -->
+			<div class="card">
+				<div class="imgBox">
+					<div class="bark"></div>
+					<img src="/exampapers/math-1.png" alt="Book Image" />
+				</div>
+				<div class="details">
+					<img
+						src="/assets/logo.png"
+						alt="Book Image"
+						style="width: auto; height: 70px; padding: 0 0 0 90px;"
+					/>
+					<div class="exam">Exam Papers</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1qR-FPfJW3aoE0NiMUgHCLD3EiP4vKa-z/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1WpL9Qga1bBeDtL7z4-hpt5saUkraS1s-/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+					<div class="sch">Schemes</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/17W_NPxUibXQhKNVv1kXNwZDhSVcpb_i1/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1yzerIoQ42GVjlI5IE40KSjCb5qc9o0aZ/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Com Maths 2 -->
+			<div class="card">
+				<div class="imgBox">
+					<div class="bark"></div>
+					<img src="/exampapers/math-2.png" alt="Book Image" />
+				</div>
+				<div class="details">
+					<img
+						src="/assets/logo.png"
+						alt="Book Image"
+						style="width: auto; height: 70px; padding: 0 0 0 90px;"
+					/>
+					<div class="exam">Exam Papers</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1B6EHimL78EBRaJRCy7XmKEpaNeOInrxP/view?usp=sharing"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1lX7_IY2BsZFhYd377zi57jtNKl61IWoo/view?usp=sharing"
+							class="button">English Medium</a>
+					</p>
+					<div class="sch">Schemes</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1jMyis1o0ZqzMYmrcujKADRuNKbW3MbQE/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1H6vNVH6Fk3WjvePr_3qQmjs_FN5e7Zf2/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+				</div>
+			</div>
+			<!-- Bio  -->
+			<div class="card">
+				<div class="imgBox">
+					<div class="bark"></div>
+					<img src="/exampapers/bio.png" alt="Book Image" />
+				</div>
+				<div class="details">
+					<img
+						src="/assets/logo.png"
+						alt="Book Image"
+						style="width: auto; height: 70px; padding: 0 0 0 90px;"
+					/>
+					<div class="exam">Exam Papers</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1qSje3h38PEuKEFVxodu9Wtk0Qx-Cj1cI/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1mneaPvya4h6PMGwelmibkiCoCj_EQEfa/view?usp=sharing"
+							class="button">English Medium</a>
+					</p>
+					<div class="sch">Schemes</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1dMDBa1FjGWeNlGdG7MjYJOHTSpIlDgim/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1h2IWzSwtTdgEAXUFi_tHJtoFMrjucd9H/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Physics -->
+			<div class="card">
+				<div class="imgBox">
+					<div class="bark"></div>
+					<img src="/exampapers/phy.png" alt="Book Image" />
+				</div>
+				<div class="details">
+					<img
+						src="/assets/logo.png"
+						alt="Book Image"
+						style="width: auto; height: 70px; padding: 0 0 0 90px;"
+					/>
+					<div class="exam">Exam Papers</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/14AFVaqmEkCzBsmE8UiweBc5_vbd995Pl/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1Jh3aPbc4Ek8DqoAie0vgUMJLh42g9sbK/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+					<div class="sch">Schemes</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1CdCT5X8tZ-dsmpylpH1mkKLadjyyZReL/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1FifnBrPLjO0N0WrX7p0Kjl3_zfXN4IC2/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+				</div>
+			</div>
+			<!-- Chemistry -->
+			<div class="card">
+				<div class="imgBox">
+					<div class="bark"></div>
+					<img src="/exampapers/che.png" alt="Book Image" />
+				</div>
+				<div class="details">
+					<img
+						src="/assets/logo.png"
+						alt="Book Image"
+						style="width: auto; height: 70px; padding: 0 0 0 90px;"
+					/>
+					<div class="exam">Exam Papers</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1QhXYHkUi8UJDVqTM8WnrC4GZnKMCiqmA/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1tCeKG9_GpUeNxMklVq2Nbirc5Cs0QxXM/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+					<div class="sch">Schemes</div>
+					<p><a href="https://drive.google.com/file/d/16XVi9Mt0Vx0FCt_WAp_1DoDZckiaX_Oq/view?usp=sharing" class="button">தமிழ் மொழிமூலம்</a></p>
+					<p><a href="https://drive.google.com/file/d/16XVi9Mt0Vx0FCt_WAp_1DoDZckiaX_Oq/view?usp=sharing" class="button">English Medium </a></p>
+				</div>
+			</div>
+
+			<!-- ICT -->
+			<div class="card">
+				<div class="imgBox">
+					<div class="bark"></div>
+					<img src="/exampapers/ict.png" alt="Book Image" />
+				</div>
+				<div class="details">
+					<img
+						src="/assets/logo.png"
+						alt="Book Image"
+						style="width: auto; height: 70px; padding: 0 0 0 90px;"
+					/>
+					<div class="exam">Exam Papers</div>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/16QaDSp5x-OiCMAe_ff2Zlp8KI8bcopsg/view?usp=drive_link"
+							class="button">தமிழ் மொழிமூலம்</a>
+					</p>
+					<p>
+						<a
+							href="https://drive.google.com/file/d/1GMwQa9jeZ4_A-UIM-OXdr2MOvvbplYXK/view?usp=drive_link"
+							class="button">English Medium</a>
+					</p>
+					<div class="sch">Schemes</div>
+									<p><a href="https://drive.google.com/file/d/17coQQ8_QtQeUBLnNr_UvYjpUS4PHpYBM/view?usp=sharing" class="button">தமிழ் மொழிமூலம்</a></p>
+									<p><a href="https://drive.google.com/file/d/17coQQ8_QtQeUBLnNr_UvYjpUS4PHpYBM/view?usp=sharing" class="button">English Medium</a></p>
+                  
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<Footer />
 </Layout>
 
@@ -37,5 +243,179 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 	.first-fold {
 		background: url("/assets/backgrounds/bg7.png") center / cover no-repeat
 			fixed;
+	}
+</style>
+
+<style>
+	h4 {
+		font-size: 26px;
+		line-height: 1px;
+		font-family: "Amatic SC", cursive;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 20px;
+		justify-items: center;
+		padding: auto;
+	}
+
+	.card {
+		color: #430143;
+		width: 300px;
+		height: 400px;
+		background: #ffffff;
+		transform-style: preserve-3d;
+		transform: perspective(2000px);
+		box-shadow:
+			inset 300px 0 50px rgba(101, 2, 90, 0.5),
+			20px 0 60px rgba(0, 0, 0, 0.5);
+		transition: 1s;
+		position: relative;
+	}
+
+	.card:hover {
+		transform: perspective(2000px) rotate(0deg) scale(0.9);
+		box-shadow:
+			inset 20px 0 50px rgba(0, 0, 0, 0.5),
+			0 10px 100px rgba(0, 0, 0, 0.5);
+	}
+
+	.card:before {
+		content: "";
+		position: absolute;
+		top: -5px;
+		left: 0;
+		width: 100%;
+		height: 5px;
+		background: #80317db8;
+		transform-origin: bottom;
+		transform: skewX(-45deg);
+	}
+
+	.card:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -5px;
+		width: 5px;
+		height: 100%;
+		background: #80317db8;
+		transform-origin: left;
+		transform: skewY(-45deg);
+	}
+
+	.imgBox {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transform-origin: left;
+		transition: 0.7s;
+	}
+
+	.bark {
+		position: absolute;
+		background: #80317d;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: 0.7s;
+	}
+
+	.imgBox img {
+		min-width: 250px;
+		max-height: 400px;
+	}
+
+	.card:hover .imgBox {
+		transform: rotateY(-135deg);
+	}
+
+	.card:hover .bark {
+		opacity: 1;
+		transition: 0.6s;
+		box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.4) inset;
+	}
+
+	.details {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		margin-top: 60px;
+	}
+
+	p {
+		text-decoration: none;
+		text-align: center;
+		font-size: 20px;
+		line-height: 5px;
+		transform: rotate(0deg);
+		padding: 0 0 0 60px;
+	}
+
+	.sch {
+		text-align: center;
+		text-decoration: underline;
+		font-size: 25px;
+		padding: 0px 0px 0 60px;
+	}
+
+	.exam {
+		text-decoration: underline;
+		text-align: center;
+		font-size: 25px;
+		padding: 0px 0px 0 60px;
+	}
+
+	.details-head {
+		text-align: center;
+		font-size: 25px;
+	}
+
+	.text-right {
+		text-align: right;
+	}
+</style>
+
+<style>
+	.button {
+		cursor: pointer;
+		position: relative;
+		border: none;
+		background: none;
+		transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+		transition-duration: 400ms;
+		transition-property: color;
+	}
+	a {
+		text-decoration: none;
+		color: #430143;
+	}
+
+	.button:focus,
+	.button:hover {
+		color: #54088a;
+	}
+
+	.button:focus:after,
+	.button:hover:after {
+		width: 100%;
+		left: 0%;
+	}
+
+	.button:after {
+		content: "";
+		pointer-events: none;
+		bottom: -2px;
+		left: 50%;
+		position: absolute;
+		width: 0%;
+		height: 2px;
+		background-color: #54088a;
+		transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+		transition-duration: 400ms;
+		transition-property: width, left;
 	}
 </style>

@@ -15,6 +15,7 @@ export default defineConfig({
 			"https://drive.google.com/drive/folders/1pAzO3OQ7nwBLuJ_gU-4vY12x6eENrwPz",
 		"/feedback": "https://forms.gle/Ca6k2rH6FNCn6NTB8",
 		"/results": `/${defaultLang}/results`,
+		"/thatkuri": `/${defaultLang}/thatkuri`,
 		"/indexnumber": `/${defaultLang}/indexnumber`,
 		"/checkstudent": `/${defaultLang}/checkstudent`,
 		"/practicepapers": `/${defaultLang}/practicepapers`,

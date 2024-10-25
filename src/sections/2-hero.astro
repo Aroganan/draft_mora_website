@@ -22,7 +22,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 	</h1>
 	<div class="w-full">
 		<div
-			class="flex items-left text-[16px] sm:text-[24px] gap-y-6 mt-8 w-fit ml-0"
+			class="flex items-left text-[16px] sm:text-[24px] gap-y-6 mt-8 w-fit ml-0 gap-x-4"
 			style="padding-bottom: 30px;"
 		>
 			<a
@@ -32,6 +32,16 @@ const t = useTranslations(getLangFromUrl(Astro.url));
 				<button class="btn !w-full">
 					<span>
 						{t("hero_index_button")}
+					</span>
+					<i
+						class="fa-solid fa-arrow-right translate-x-[10px] transition-transform pr-2"
+					></i>
+				</button>
+			</a>
+			<a href="./results" class="no-underline">
+				<button class="btn">
+					<span>
+						{t("hero_results_button")}
 					</span>
 					<i
 						class="fa-solid fa-arrow-right translate-x-[10px] transition-transform pr-2"

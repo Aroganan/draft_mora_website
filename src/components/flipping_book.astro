@@ -1,0 +1,168 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+interface Props {
+	subject01: string;
+	download_link_t_01: string;
+	download_link_e_01: string;
+	scheme_title: string;
+	scheme_link_en: string;
+	scheme_link_ta: string;
+}
+
+const {
+	download_link_t_01,
+	download_link_e_01,
+	subject01,
+	scheme_title,
+	scheme_link_en,
+	scheme_link_ta,
+} = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="card">
+	<div class="card-content">
+		<p class="card-title">{subject01}</p>
+		{
+			scheme_link_en && scheme_link_ta ? (
+				<>
+					<a href={scheme_link_ta}>
+						<button> தமிழ் மொழிமூலம்</button>
+					</a>
+					<a href={scheme_link_en}>
+						<button> English Medium</button>
+					</a>
+				</>
+			) : null
+		}
+	</div>
+</div>
+
+<style>
+	.card {
+		/* width: 300px; */
+		width: 100%;
+		min-height: 200px;
+		height: auto;
+		background-color: #5063c0;
+		background-image: linear-gradient(
+			65deg,
+			#54088a 0%,
+			#ba49b3 46%,
+			#9f80a0 100%
+		);
+		border-radius: 8px;
+		color: white;
+		overflow: hidden;
+		position: relative;
+		transform-style: preserve-3d;
+		perspective: 1000px;
+		transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+		cursor: pointer;
+	}
+
+	.card-content {
+		padding: 18px;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		color: white;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		height: 100%;
+	}
+
+	.card-content .card-title {
+		font-size: 20px;
+		font-weight: 700;
+		color: inherit;
+		text-transform: uppercase;
+	}
+
+	.card-content .card-para {
+		color: inherit;
+		opacity: 0.8;
+		font-size: 14px;
+	}
+
+	.card:hover {
+		transform: rotateY(10deg) scale(1.05);
+		box-shadow: 30px 20px 20px rgba(29, 28, 28, 0.493);
+	}
+
+	.card:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+		transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+		z-index: 1;
+	}
+
+	.card:hover:before {
+		transform: translateX(-100%);
+	}
+
+	.card:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+		transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+		z-index: 1;
+	}
+
+	.card:hover:after {
+		transform: translateX(100%);
+	}
+	button {
+		font-size: 18px;
+		color: #ffffff;
+		font-family: lato;
+		font-weight: 800;
+		cursor: pointer;
+		position: relative;
+		border: none;
+		background: none;
+		text-transform: uppercase;
+		transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+		transition-duration: 400ms;
+		transition-property: color;
+	}
+
+	button:focus,
+	button:hover {
+		color: #bcbcbc;
+	}
+
+	button:focus:after,
+	button:hover:after {
+		width: 100%;
+		left: 0%;
+	}
+
+	button:after {
+		content: "";
+		pointer-events: none;
+		bottom: -2px;
+		left: 50%;
+		position: absolute;
+		width: 0%;
+		height: 2px;
+		background-color: #54088a;
+		transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+		transition-duration: 400ms;
+		transition-property: width, left;
+	}
+</style>
